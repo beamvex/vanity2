@@ -65,7 +65,7 @@ class GitLogger {
             return;
         }
         
-        for (const commit of commits) {
+        for (const commit of commits) { 
             console.log('----------------------------------------');
             console.log(`Commit: ${commit.hash}`);
             console.log(`Author: ${commit.author}`);
