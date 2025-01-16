@@ -134,7 +134,7 @@ class GitLogger {
 
                 // Apply the patch preserving the original commit date
                 console.log(`Applying commit: ${commit.message} (${commit.date})`);
-                await targetGit.raw(['am', ...amArgs], { env });
+                await targetGit.raw(amArgs); //, { env });
                 
                 // Clean up the patch file
                 await targetGit.raw(['clean', '-f', patchPath]);
